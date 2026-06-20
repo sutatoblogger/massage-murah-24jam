@@ -14,7 +14,7 @@
 
     <style>
         /* ==========================================================================
-           ZERO-BLOAT VANILLA CSS (MOTHERSHIP SPA PREMIUM V2 - DESKTOP & MOBILE PERFECTED)
+           ZERO-BLOAT VANILLA CSS (MOTHERSHIP SPA PREMIUM V3.1 - FINAL VISUALS)
            ========================================================================== */
         :root {
             --primary: #eab308;
@@ -105,8 +105,8 @@
         .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-top: 8rem; padding-bottom: 4rem; position: relative; }
         .hero::before {
             content: ''; position: absolute; inset: 0; z-index: -1;
-            background: url('https://placehold.co/1920x1080/060b19/eab308/webp?text=Latar+Belakang+Spa+Premium') center/cover no-repeat;
-            opacity: 0.1; mask-image: linear-gradient(to bottom, black 30%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
+            background: url('area-layanan-pijat-panggilan-jogja.webp') center/cover no-repeat;
+            opacity: 0.15; mask-image: linear-gradient(to bottom, black 30%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
         }
         .hero-title { line-height: 1.1; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 1.5rem; width: 100%; font-size: clamp(2.2rem, 6vw, 5rem); }
         .hero-subtitle { font-size: clamp(1rem, 2vw, 1.15rem); color: var(--text-muted); max-width: 750px; margin: 1.5rem auto 2.5rem; line-height: 1.8; font-weight: 400; }
@@ -121,12 +121,18 @@
         .bento-card h3 { font-size: 1.35rem; margin-bottom: 0.75rem; }
         .bento-card p { font-size: 1rem; color: var(--text-muted); line-height: 1.6; }
 
-        /* Carousel Services */
-        .carousel-wrapper { width: 100%; overflow: hidden; position: relative; margin-top: 3rem; }
-        .carousel { display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 1rem 0 3rem; scrollbar-width: none; }
-        .carousel::-webkit-scrollbar { display: none; }
-        .carousel-card { min-width: 85vw; max-width: 420px; scroll-snap-align: center; flex: 0 0 auto; border-radius: 1.5rem; background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; }
-        @media (min-width: 768px) { .carousel-card { min-width: 380px; } }
+        /* Vertical Grid Treatment Cards */
+        .treatment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .treatment-card {
+            border-radius: 1.5rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-top-color: var(--glass-highlight); border-left-color: var(--glass-highlight);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden; display: flex; flex-direction: column; transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s, background 0.4s;
+        }
+        .treatment-card:hover { transform: translateY(-8px); background: rgba(255,255,255,0.04); border-color: rgba(234, 179, 8, 0.4); border-top-color: rgba(234, 179, 8, 0.6); }
+        .treatment-img-box { width: 100%; height: 240px; position: relative; overflow: hidden; background: rgba(0,0,0,0.5); border-bottom: 1px solid var(--glass-border); }
+        .treatment-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.6s; filter: brightness(0.85); }
+        .treatment-card:hover .treatment-img-box img { transform: scale(1.08); filter: brightness(1.1); }
+        .treatment-content { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
         .service-price { font-size: 1.35rem; font-weight: 800; color: var(--primary); margin: 1.25rem 0; font-family: 'Plus Jakarta Sans', sans-serif;}
 
         /* Testimonials */
@@ -139,9 +145,9 @@
         /* Maps Bypass Area */
         .maps-bypass { display: flex; align-items: center; justify-content: center; position: relative; border-radius: 2rem; overflow: hidden; margin-top: 4rem; border: 1px solid var(--glass-highlight); aspect-ratio: 21/9; text-decoration: none; box-shadow: 0 20px 40px rgba(0,0,0,0.5); background: var(--bg-base); }
         @media (max-width: 768px) { .maps-bypass { aspect-ratio: 4/3; border-radius: 1.5rem; } }
-        .maps-bypass img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s; filter: grayscale(30%); }
-        .maps-bypass:hover img { transform: scale(1.05); opacity: 0.8; filter: grayscale(0%); }
-        .maps-overlay { position: absolute; z-index: 2; padding: 0 1.5rem; text-align: center; }
+        .maps-bypass img { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s; }
+        .maps-bypass:hover img { transform: scale(1.05); opacity: 0.9; }
+        .maps-overlay { position: absolute; z-index: 2; padding: 0 1.5rem; text-align: center; width: 100%; }
 
         /* Forms Area / Fast Booking CTA */
         .booking-cta-box { padding: 3rem; background: linear-gradient(135deg, rgba(234,179,8,0.08) 0%, transparent 100%); border-radius: 2rem; }
@@ -169,6 +175,7 @@
             body { padding-bottom: 100px !important; } 
             .btn-glass { width: 100%; padding: 1.2rem; } 
             .booking-cta-box { padding: 2rem; }
+            .treatment-img-box { height: 200px; }
         }
     </style>
 
@@ -217,7 +224,7 @@
           "@type": "WebPage",
           "@id": "https://massage-murah-24jam.vercel.app/#webpage",
           "url": "https://massage-murah-24jam.vercel.app/",
-          "name": "PIJAT PANGGILAN MURAH 24 JAM: Spa Hotel & Rumah Tanpa Antre",
+          "name": "PIJAT PANGGILAN MURAH 24 Jam: Spa Hotel & Rumah Tanpa Antre",
           "isPartOf": { "@id": "https://massage-murah-24jam.vercel.app/#localbusiness" },
           "relatedLink": [
             "https://dongkrakusaha.com/layanan-pijat-panggilan-murah-malioboro",
@@ -354,41 +361,59 @@
                 <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem;">Pilihan <span class="text-gradient">Treatment</span></h2>
                 <p class="text-muted" style="margin-bottom: 3rem; font-size: 1.1rem;">Kembalikan kebugaran fisik Anda dengan paket transparan kami.</p>
             </div>
-        </div>
-        
-        <div class="carousel-wrapper">
-            <div class="carousel container">
-                <article class="carousel-card">
-                    <div>
-                        <div class="badge" style="background: rgba(234, 179, 8, 0.15);">Paling Laris</div>
-                        <h3 style="font-size: 1.75rem;">Tradisional & Urut Capek</h3>
-                        <p class="text-muted" style="margin-top: 1rem; font-size: 1rem; line-height: 1.6;">Menghilangkan pegal-pegal berat dan melancarkan peredaran darah pasca aktivitas padat.</p>
+            
+            <div class="treatment-grid">
+                <!-- Card 1: Tradisional & Urut Capek -->
+                <article class="treatment-card">
+                    <div class="treatment-img-box">
+                        <img src="jasa-pijat-tradisional-panggilan-malioboro.webp" alt="Jasa pijat tradisional dan urut capek panggilan di Malioboro Jogja" loading="lazy">
                     </div>
-                    <div>
-                        <div class="service-price">Mulai Rp 150.000 / Jam</div>
-                        <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Pijat%20Tradisional%20&%20Urut%20Capek." target="_blank" rel="noopener" class="btn-glass" style="width: 100%; padding: 1rem; font-size: 1rem;">Pesan Slot Ini</a>
-                    </div>
-                </article>
-                <article class="carousel-card">
-                    <div>
-                        <div class="badge">Spesialis Masuk Angin</div>
-                        <h3 style="font-size: 1.75rem;">Refleksi & Kerokan</h3>
-                        <p class="text-muted" style="margin-top: 1rem; font-size: 1rem; line-height: 1.6;">Menargetkan titik saraf kaki & tangan, plus metode kerok presisi untuk usir angin membandel.</p>
-                    </div>
-                    <div>
-                        <div class="service-price">Mulai Rp 150.000 / Jam</div>
-                        <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Refleksi%20&%20Kerokan." target="_blank" rel="noopener" class="btn-glass" style="width: 100%; padding: 1rem; font-size: 1rem;">Pesan Slot Ini</a>
+                    <div class="treatment-content">
+                        <div>
+                            <div class="badge" style="background: rgba(234, 179, 8, 0.15); margin-bottom: 1rem;">Paling Laris</div>
+                            <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Tradisional & Urut Capek</h3>
+                            <p class="text-muted" style="font-size: 1rem; line-height: 1.6;">Menghilangkan pegal-pegal berat dan melancarkan peredaran darah pasca aktivitas padat.</p>
+                        </div>
+                        <div>
+                            <div class="service-price">Mulai Rp 150.000 / Jam</div>
+                            <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Pijat%20Tradisional%20&%20Urut%20Capek." target="_blank" rel="noopener" class="btn-glass" style="width: 100%; padding: 1rem; font-size: 1rem;">Pesan Slot Ini</a>
+                        </div>
                     </div>
                 </article>
-                <article class="carousel-card">
-                    <div>
-                        <div class="badge">Relaksasi Total</div>
-                        <h3 style="font-size: 1.75rem;">Sport Massage & Lulur</h3>
-                        <p class="text-muted" style="margin-top: 1rem; font-size: 1rem; line-height: 1.6;">Pijatan otot dalam dipadu dengan minyak aromaterapi/lulur untuk kulit bersih dan pikiran rileks.</p>
+
+                <!-- Card 2: Refleksi & Kerokan -->
+                <article class="treatment-card">
+                    <div class="treatment-img-box">
+                        <img src="layanan-pijat-refleksi-panggilan-sleman.webp" alt="Layanan pijat refleksi dan kerokan spesialis masuk angin di Sleman" loading="lazy">
                     </div>
-                    <div>
-                        <div class="service-price">Mulai Rp 200.000 / Jam</div>
-                        <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Sport%20Massage%20&%20Lulur." target="_blank" rel="noopener" class="btn-glass" style="width: 100%; padding: 1rem; font-size: 1rem;">Pesan Slot Ini</a>
+                    <div class="treatment-content">
+                        <div>
+                            <div class="badge" style="background: rgba(255, 255, 255, 0.05); margin-bottom: 1rem;">Spesialis Masuk Angin</div>
+                            <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Refleksi & Kerokan</h3>
+                            <p class="text-muted" style="font-size: 1rem; line-height: 1.6;">Menargetkan titik saraf kaki & tangan, plus metode kerok presisi untuk usir angin membandel.</p>
+                        </div>
+                        <div>
+                            <div class="service-price">Mulai Rp 150.000 / Jam</div>
+                            <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Refleksi%20&%20Kerokan." target="_blank" rel="noopener" class="btn-glass" style="width: 100%; padding: 1rem; font-size: 1rem;">Pesan Slot Ini</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3: Sport Massage & Lulur -->
+                <article class="treatment-card">
+                    <div class="treatment-img-box">
+                        <img src="layanan-sport-massage-lulur-bantul.webp" alt="Layanan sport massage dan pijat lulur panggilan terdekat di Bantul" loading="lazy">
+                    </div>
+                    <div class="treatment-content">
+                        <div>
+                            <div class="badge" style="background: rgba(255, 255, 255, 0.05); margin-bottom: 1rem;">Relaksasi Total</div>
+                            <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Sport Massage & Lulur</h3>
+                            <p class="text-muted" style="font-size: 1rem; line-height: 1.6;">Pijatan otot dalam dipadu dengan minyak aromaterapi/lulur untuk kulit bersih dan pikiran rileks.</p>
+                        </div>
+                        <div>
+                            <div class="service-price">Mulai Rp 200.000 / Jam</div>
+                            <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Sport%20Massage%20&%20Lulur." target="_blank" rel="noopener" class="btn-glass" style="width: 100%; padding: 1rem; font-size: 1rem;">Pesan Slot Ini</a>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -424,11 +449,11 @@
                 </div>
             </div>
 
-            <a href="https://placehold.co/1920x800/060b19/eab308/webp?text=Area+Layanan+Jogja+Sekitarnya" target="_blank" rel="noopener" class="maps-bypass">
-                <img src="https://placehold.co/1920x800/060b19/eab308/webp?text=Area+Layanan+Jogja+Sekitarnya" alt="Peta Lokasi Layanan Pijat Panggilan Jogja" loading="lazy">
+            <a href="https://www.google.com/maps?q=Yogyakarta" target="_blank" rel="noopener" class="maps-bypass">
+                <img src="area-layanan-pijat-panggilan-jogja.webp" alt="Area jangkauan layanan pijat panggilan 24 jam di Malioboro, Sleman, Bantul, dan Kota Yogyakarta" loading="lazy">
                 <div class="maps-overlay">
                     <span class="btn-glass" style="background: rgba(0,0,0,0.7); backdrop-filter: blur(10px);">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                         Melayani: Malioboro, Sleman, Bantul & Kota Yogyakarta
                     </span>
                 </div>
@@ -472,7 +497,7 @@
                     <p class="text-muted" style="margin-bottom: 2.5rem; font-size: 1.05rem; line-height: 1.6;">Amankan slot Anda sekarang sebelum keduluan antrean lain di area Anda malam ini.</p>
                     
                     <a href="https://wa.me/6285165982161?text=Halo%20Admin%20Massage%20Murah,%20saya%20butuh%20booking%20jasa%20pijat%20panggilan%20Jogja%20tanpa%20antre%20malam%20ini." target="_blank" rel="noopener" class="btn-glass btn-wa" style="width: 100%; font-size: 1.15rem; padding: 1.25rem;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         PESAN JASA PIJAT SEKARANG
                     </a>
                     <p style="text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 1.5rem;">
@@ -513,7 +538,7 @@
     </a>
 
     <script>
-        // Scroll Reveal
+        // Scroll Reveal Utility
         document.addEventListener("DOMContentLoaded", () => {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
