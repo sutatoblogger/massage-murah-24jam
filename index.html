@@ -10,19 +10,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💆</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23eab308'>M</text></svg>">
 
     <style>
         /* ==========================================================================
-           ZERO-BLOAT VANILLA CSS (MOTHERSHIP SPA PREMIUM)
+           ZERO-BLOAT VANILLA CSS (MOTHERSHIP SPA PREMIUM V2 - DESKTOP & MOBILE PERFECTED)
            ========================================================================== */
         :root {
-            --primary: #eab308; /* Premium Gold */
+            --primary: #eab308;
             --primary-glow: rgba(234, 179, 8, 0.4);
-            --bg-base: #060b19; /* Deep Navy Blue / Premium Spa feel */
+            --bg-base: #060b19;
             --text-main: #ffffff;
             --text-muted: #94a3b8;
-            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-bg: rgba(255, 255, 255, 0.02);
             --glass-border: rgba(255, 255, 255, 0.08);
             --glass-highlight: rgba(255, 255, 255, 0.12);
             --danger: #ef4444;
@@ -34,76 +34,70 @@
         body { background-color: var(--bg-base); color: var(--text-main); line-height: 1.7; overflow-x: hidden; antialiased; font-family: 'Inter', sans-serif; }
         h1, h2, h3, .brand, .stat-val, .badge { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.03em; }
 
-        /* Aura 3D Illusion Background */
+        /* God-Tier CSS Illusion: Animated Mesh + Architectural Grid */
         .ambient-bg {
             position: fixed; inset: 0; z-index: -1;
             background-color: var(--bg-base);
             background-image: 
-                radial-gradient(circle at 15% 50%, rgba(234, 179, 8, 0.1), transparent 40%),
-                radial-gradient(circle at 85% 30%, rgba(30, 58, 138, 0.2), transparent 40%),
-                radial-gradient(circle at 50% 80%, rgba(234, 179, 8, 0.05), transparent 50%),
-                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-            background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
-            animation: bgShift 15s ease-in-out infinite alternate;
+                radial-gradient(circle at 15% 50%, rgba(234, 179, 8, 0.12), transparent 45%),
+                radial-gradient(circle at 85% 30%, rgba(30, 58, 138, 0.25), transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(234, 179, 8, 0.08), transparent 50%),
+                linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 50px 50px, 50px 50px;
+            animation: bgShift 20s ease-in-out infinite alternate;
         }
-        @keyframes bgShift { 0% { background-position: 0% 0%, 0% 0%, 0% 0%, 0 0, 0 0; } 100% { background-position: 100% 100%, -50% 50%, 50% -50%, 20px 20px, 20px 20px; } }
+        @keyframes bgShift { 0% { background-position: 0% 0%, 0% 0%, 0% 0%, 0 0, 0 0; } 100% { background-position: 100% 100%, -50% 50%, 50% -50%, 25px 25px, 25px 25px; } }
 
         .gradient-blur { position: fixed; z-index: 5; inset: auto 0 0 0; height: 15vh; pointer-events: none; backdrop-filter: blur(10px); -webkit-mask: linear-gradient(to bottom, transparent 0%, black 100%); mask: linear-gradient(to bottom, transparent 0%, black 100%); }
 
         /* Typography & Layout */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
         .section { padding: 6rem 0; position: relative; z-index: 10; }
         .text-center { text-align: center; }
         .lazy-render { content-visibility: auto; contain-intrinsic-size: 1px 1000px; contain: paint; }
 
         /* Animations */
         @keyframes fadeSlideIn { 0% { opacity: 0; transform: translateY(30px); filter: blur(8px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0px); } }
-        @keyframes shimmer-mask { to { -webkit-mask-position: 200% 0; mask-position: 200% 0; } }
         @keyframes sweep { 0% { left: -100%; } 100% { left: 200%; } }
         
         .animate-fade { animation: fadeSlideIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
-        .animate-shimmer-mask {
-            -webkit-mask: linear-gradient(90deg, transparent 0, #fff 20%, #fff 80%, transparent 200%) 0 0/200% 100% no-repeat;
-            mask: linear-gradient(90deg, transparent 0, #fff 20%, #fff 80%, transparent 200%) 0 0/200% 100% repeat;
-            animation: shimmer-mask 3s ease-in-out infinite both;
-        }
-        .text-gradient { background: linear-gradient(135deg, var(--primary) 0%, #fff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-gradient { background: linear-gradient(135deg, var(--primary) 0%, #ffffff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        /* Glassmorphism */
+        /* Aura Glassmorphism */
         .glass-card {
-            background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border); border-top-color: var(--glass-highlight); border-left-color: var(--glass-highlight);
-            border-radius: 1.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            border-radius: 1.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
             transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s, background 0.4s;
         }
-        .glass-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.05); border-color: rgba(234, 179, 8, 0.3); border-top-color: rgba(234, 179, 8, 0.5); }
+        .glass-card:hover { transform: translateY(-6px); background: rgba(255,255,255,0.04); border-color: rgba(234, 179, 8, 0.4); border-top-color: rgba(234, 179, 8, 0.6); }
         
         .badge {
-            display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.25rem; border-radius: 50px;
-            background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.2);
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.5rem 1.25rem; border-radius: 50px;
+            background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3);
             font-size: 0.85rem; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
-            margin-bottom: 2rem;
+            margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(234, 179, 8, 0.1);
         }
 
-        /* Buttons */
+        /* Shimmer Buttons */
         .btn-glass {
             display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem;
-            padding: 1rem 2.25rem; border-radius: 50px; font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif;
+            padding: 1.1rem 2.5rem; border-radius: 50px; font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif;
             text-decoration: none; color: var(--text-main);
             background: var(--glass-bg); backdrop-filter: blur(16px); 
             border: 1px solid var(--glass-border); border-top-color: var(--glass-highlight);
-            transition: all 0.3s ease; position: relative; overflow: hidden; cursor: pointer; text-align: center;
+            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); position: relative; overflow: hidden; cursor: pointer; text-align: center;
         }
-        .btn-glass::before { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); transition: all 0.5s ease; }
+        .btn-glass::before { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: all 0.5s ease; }
         .btn-glass:hover::before { animation: sweep 1.5s infinite; }
-        .btn-glass:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .btn-glass:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
         
-        .btn-wa { background: var(--wa-green); color: #fff; border: none; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); }
-        .btn-wa:hover { background: #1ebd5a; box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5); }
-        
+        .btn-wa { background: linear-gradient(135deg, #25D366 0%, #1ebd5a 100%); color: #fff; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3); }
+        .btn-wa:hover { background: linear-gradient(135deg, #1ebd5a 0%, #17a34a 100%); box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5); border-color: rgba(255,255,255,0.4); }
+
         /* Navbar */
-        .navbar { position: fixed; top: 0; width: 100%; z-index: 50; padding: 1rem 0; background: rgba(6, 11, 25, 0.8); backdrop-filter: blur(24px); border-bottom: 1px solid var(--glass-border); }
+        .navbar { position: fixed; top: 0; width: 100%; z-index: 50; padding: 1rem 0; background: rgba(6, 11, 25, 0.85); backdrop-filter: blur(24px); border-bottom: 1px solid var(--glass-border); }
         .navbar .container { display: flex; justify-content: space-between; align-items: center; }
         .brand { font-size: clamp(1.2rem, 3vw, 1.5rem); font-weight: 800; color: var(--text-main); text-decoration: none; letter-spacing: -1px; display: flex; align-items: center; gap: 0.5rem; }
 
@@ -112,71 +106,69 @@
         .hero::before {
             content: ''; position: absolute; inset: 0; z-index: -1;
             background: url('https://placehold.co/1920x1080/060b19/eab308/webp?text=Latar+Belakang+Spa+Premium') center/cover no-repeat;
-            opacity: 0.15; mask-image: linear-gradient(to bottom, black 40%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+            opacity: 0.1; mask-image: linear-gradient(to bottom, black 30%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
         }
-        .hero-title { line-height: 1.1; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 1.5rem; width: 100%; font-size: clamp(2rem, 6vw, 4.5rem); }
-        .hero-subtitle { font-size: clamp(1rem, 2.5vw, 1.15rem); color: var(--text-muted); max-width: 700px; margin: 1.5rem auto 2.5rem; line-height: 1.8; font-weight: 400; }
+        .hero-title { line-height: 1.1; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 1.5rem; width: 100%; font-size: clamp(2.2rem, 6vw, 5rem); }
+        .hero-subtitle { font-size: clamp(1rem, 2vw, 1.15rem); color: var(--text-muted); max-width: 750px; margin: 1.5rem auto 2.5rem; line-height: 1.8; font-weight: 400; }
         
         /* Trust Signals */
-        .trust-signals { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 3rem; font-size: 0.9rem; color: var(--text-muted); font-weight: 600; }
-        .trust-item { display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.03); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--glass-border); }
+        .trust-signals { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 3rem; font-size: 0.9rem; color: var(--text-main); font-weight: 500; }
+        .trust-item { display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.03); padding: 0.6rem 1.25rem; border-radius: 12px; border: 1px solid var(--glass-border); backdrop-filter: blur(10px); }
 
         /* Bento Grid */
         .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-        .bento-icon { width: 50px; height: 50px; border-radius: 12px; background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; color: var(--primary); }
-        .bento-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
-        .bento-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+        .bento-icon { width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, rgba(234, 179, 8, 0.15) 0%, rgba(234, 179, 8, 0.02) 100%); border: 1px solid rgba(234, 179, 8, 0.3); border-top-color: rgba(234, 179, 8, 0.5); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--primary); }
+        .bento-card h3 { font-size: 1.35rem; margin-bottom: 0.75rem; }
+        .bento-card p { font-size: 1rem; color: var(--text-muted); line-height: 1.6; }
 
         /* Carousel Services */
         .carousel-wrapper { width: 100%; overflow: hidden; position: relative; margin-top: 3rem; }
         .carousel { display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 1rem 0 3rem; scrollbar-width: none; }
         .carousel::-webkit-scrollbar { display: none; }
-        .carousel-card { min-width: 85vw; max-width: 400px; scroll-snap-align: center; flex: 0 0 auto; border-radius: 1.5rem; background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; }
-        @media (min-width: 768px) { .carousel-card { min-width: 350px; } }
-        .service-price { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin: 1rem 0; }
+        .carousel-card { min-width: 85vw; max-width: 420px; scroll-snap-align: center; flex: 0 0 auto; border-radius: 1.5rem; background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+        @media (min-width: 768px) { .carousel-card { min-width: 380px; } }
+        .service-price { font-size: 1.35rem; font-weight: 800; color: var(--primary); margin: 1.25rem 0; font-family: 'Plus Jakarta Sans', sans-serif;}
 
         /* Testimonials */
-        .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-        .testi-card { padding: 2rem; }
-        .stars { color: var(--primary); margin-bottom: 1rem; letter-spacing: 2px; }
-        .testi-text { font-style: italic; color: #e2e8f0; margin-bottom: 1.5rem; font-size: 0.95rem; }
-        .testi-author { font-weight: 700; font-size: 0.9rem; color: var(--primary); }
+        .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+        .testi-card { padding: 2.5rem; }
+        .stars { display: flex; gap: 0.25rem; color: var(--primary); margin-bottom: 1.25rem; }
+        .testi-text { font-style: italic; color: #e2e8f0; margin-bottom: 1.5rem; font-size: 1rem; line-height: 1.8; }
+        .testi-author { font-weight: 700; font-size: 0.95rem; color: var(--primary); }
 
         /* Maps Bypass Area */
-        .maps-bypass { display: flex; align-items: center; justify-content: center; position: relative; border-radius: 2rem; overflow: hidden; margin-top: 3rem; border: 1px solid var(--glass-highlight); aspect-ratio: 16/9; text-decoration: none; box-shadow: 0 20px 40px rgba(0,0,0,0.4); background: var(--bg-base); }
+        .maps-bypass { display: flex; align-items: center; justify-content: center; position: relative; border-radius: 2rem; overflow: hidden; margin-top: 4rem; border: 1px solid var(--glass-highlight); aspect-ratio: 21/9; text-decoration: none; box-shadow: 0 20px 40px rgba(0,0,0,0.5); background: var(--bg-base); }
         @media (max-width: 768px) { .maps-bypass { aspect-ratio: 4/3; border-radius: 1.5rem; } }
-        .maps-bypass img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; transition: transform 0.8s, opacity 0.4s; filter: grayscale(30%); }
-        .maps-bypass:hover img { transform: scale(1.05); opacity: 0.7; filter: grayscale(0%); }
+        .maps-bypass img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s; filter: grayscale(30%); }
+        .maps-bypass:hover img { transform: scale(1.05); opacity: 0.8; filter: grayscale(0%); }
         .maps-overlay { position: absolute; z-index: 2; padding: 0 1.5rem; text-align: center; }
 
-        /* Forms & FAQ */
+        /* Forms Area / Fast Booking CTA */
+        .booking-cta-box { padding: 3rem; background: linear-gradient(135deg, rgba(234,179,8,0.08) 0%, transparent 100%); border-radius: 2rem; }
         .faq-item { border-bottom: 1px solid var(--glass-border); padding: 1.5rem 0; }
-        .faq-q { font-weight: 600; font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.5rem; display: flex; align-items: flex-start; gap: 0.75rem; }
-        .faq-a { color: var(--text-muted); font-size: 0.95rem; padding-left: 2.25rem; }
-        
-        .form-control { width: 100%; padding: 1.25rem; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: 1rem; color: #fff; font-size: 0.95rem; font-family: 'Inter', sans-serif; margin-bottom: 1rem; transition: all 0.3s; }
-        .form-control:focus { outline: none; border-color: var(--primary); background: rgba(255,255,255,0.06); }
-        textarea.form-control { min-height: 100px; resize: vertical; }
+        .faq-q { font-weight: 600; font-size: 1.15rem; color: var(--text-main); margin-bottom: 0.5rem; display: flex; align-items: flex-start; gap: 0.75rem; }
+        .faq-a { color: var(--text-muted); font-size: 1rem; padding-left: 2.25rem; line-height: 1.6; }
 
         /* Footer */
-        footer { border-top: 1px solid var(--glass-border); padding: 4rem 0 2rem; margin-top: 4rem; background: rgba(0,0,0,0.4); backdrop-filter: blur(20px); }
-        .tags-box { background: rgba(255,255,255,0.02); padding: 1.5rem; border-radius: 1rem; font-size: 0.75rem; color: var(--text-muted); border: 1px solid var(--glass-border); line-height: 1.8; margin-top: 2rem; }
-        .credit { border-top: 1px solid var(--glass-border); padding-top: 1.5rem; text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: 2rem; }
-        .credit a { color: var(--primary); text-decoration: none; }
+        footer { border-top: 1px solid var(--glass-border); padding: 5rem 0 2rem; margin-top: 5rem; background: rgba(0,0,0,0.5); backdrop-filter: blur(20px); }
+        .tags-box { background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 1.5rem; font-size: 0.85rem; color: var(--text-muted); border: 1px solid var(--glass-border); line-height: 1.8; margin-top: 3rem; }
+        .credit { border-top: 1px solid var(--glass-border); padding-top: 2rem; text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 3rem; }
+        .credit a { color: var(--primary); text-decoration: none; font-weight: 600; }
 
         /* Scroll Reveal Utility */
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); will-change: opacity, transform; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
         /* Mobile Adjustments */
-        .sticky-wa { position: fixed; bottom: 20px; right: 20px; background: var(--wa-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); z-index: 99; animation: pulseWa 2s infinite; border: 2px solid rgba(255,255,255,0.2); }
+        .sticky-wa { position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, #25D366 0%, #1ebd5a 100%); color: white; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); z-index: 99; animation: pulseWa 2s infinite; border: 2px solid rgba(255,255,255,0.2); transition: transform 0.3s; }
+        .sticky-wa:hover { transform: scale(1.1); }
         @keyframes pulseWa { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
         
         @media (max-width: 768px) { 
             .section { padding: 4rem 0; } 
             body { padding-bottom: 100px !important; } 
-            .btn-glass { width: 100%; } 
-            .hero-title { font-size: 2.2rem; }
+            .btn-glass { width: 100%; padding: 1.2rem; } 
+            .booking-cta-box { padding: 2rem; }
         }
     </style>
 
@@ -186,10 +178,10 @@
       "@graph": [
         {
           "@type": "LocalBusiness",
-          "@id": "https://massagemurah24jam.vercel.app/#localbusiness",
+          "@id": "https://massage-murah-24jam.vercel.app/#localbusiness",
           "name": "Massage Murah",
           "description": "Jasa Spa & Pijat Panggilan Profesional 24 Jam di Yogyakarta. Layanan ke hotel, apartemen, dan rumah bebas biaya transport.",
-          "url": "https://massagemurah24jam.vercel.app/",
+          "url": "https://massage-murah-24jam.vercel.app/",
           "telephone": "+6285165982161",
           "address": {
             "@type": "PostalAddress",
@@ -202,7 +194,7 @@
         },
         {
           "@type": "FAQPage",
-          "@id": "https://massagemurah24jam.vercel.app/#faq",
+          "@id": "https://massage-murah-24jam.vercel.app/#faq",
           "mainEntity": [
             {
               "@type": "Question",
@@ -223,10 +215,10 @@
         },
         {
           "@type": "WebPage",
-          "@id": "https://massagemurah24jam.vercel.app/#webpage",
-          "url": "https://massagemurah24jam.vercel.app/",
+          "@id": "https://massage-murah-24jam.vercel.app/#webpage",
+          "url": "https://massage-murah-24jam.vercel.app/",
           "name": "PIJAT PANGGILAN MURAH 24 JAM: Spa Hotel & Rumah Tanpa Antre",
-          "isPartOf": { "@id": "https://massagemurah24jam.vercel.app/#localbusiness" },
+          "isPartOf": { "@id": "https://massage-murah-24jam.vercel.app/#localbusiness" },
           "relatedLink": [
             "https://dongkrakusaha.com/layanan-pijat-panggilan-murah-malioboro",
             "https://dongkrakusaha.com/layanan-pijat-panggilan-murah-sleman",
@@ -249,11 +241,11 @@
     <header class="navbar">
         <div class="container">
             <a href="#" class="brand">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg>
                 Massage<span style="color: var(--primary);">Murah.</span>
             </a>
-            <a href="https://wa.me/6285165982161?text=Halo%20Admin%20Massage%20Murah,%20saya%20butuh%20terapis%20sekarang." target="_blank" rel="noopener" class="btn-glass btn-wa" style="padding: 0.5rem 1rem; font-size: 0.8rem; width: auto;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            <a href="https://wa.me/6285165982161?text=Halo%20Admin%20Massage%20Murah,%20saya%20butuh%20terapis%20sekarang." target="_blank" rel="noopener" class="btn-glass btn-wa" style="padding: 0.6rem 1.25rem; font-size: 0.85rem; width: auto;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 WA Darurat
             </a>
         </div>
@@ -262,7 +254,8 @@
     <section class="hero">
         <div class="container">
             <div class="badge animate-fade">
-                ⭐ Layanan Pijat Panggilan #1 Jogja
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                Layanan Pijat Panggilan #1 Jogja
             </div>
 
             <h1 class="hero-title animate-fade" style="animation-delay: 0.1s;">
@@ -276,29 +269,39 @@
             </p>
             
             <div class="animate-fade" style="animation-delay: 0.3s;">
-                <a href="https://wa.me/6285165982161?text=Halo%20Admin%20Massage%20Murah,%20badan%20saya%20pegal%20dan%20butuh%20terapis%20panggilan%20sekarang.%20Bisa%20cek%20slot?" target="_blank" rel="noopener" class="btn-glass btn-wa" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">
-                    PANGGIL TERAPIS SEKARANG!
+                <a href="https://wa.me/6285165982161?text=Halo%20Admin%20Massage%20Murah,%20badan%20saya%20pegal%20dan%20butuh%20terapis%20panggilan%20sekarang.%20Bisa%20cek%20slot?" target="_blank" rel="noopener" class="btn-glass btn-wa" style="font-size: 1.15rem; padding: 1.25rem 3rem;">
+                    PANGGIL TERAPIS SEKARANG
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </a>
-                <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--primary);">*Respon Cepat di bawah 1 Menit</p>
+                <p style="margin-top: 1.25rem; font-size: 0.9rem; color: var(--primary); font-weight: 500;">*Respon Cepat di bawah 1 Menit</p>
             </div>
 
             <div class="trust-signals animate-fade" style="animation-delay: 0.4s;">
-                <div class="trust-item">🔒 100% Pijat Kesehatan</div>
-                <div class="trust-item">👨‍⚕️ Terapis Bersertifikat</div>
-                <div class="trust-item">⏱️ Buka 24 Jam</div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    100% Pijat Kesehatan
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+                    Terapis Bersertifikat
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    Buka 24 Jam
+                </div>
             </div>
         </div>
     </section>
 
     <section class="section lazy-render reveal">
-        <div class="container text-center" style="max-width: 800px;">
-            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem;">Mengapa Anda Harus <span class="text-gradient">Segera Dipijat</span> Hari Ini?</h2>
+        <div class="container text-center" style="max-width: 900px;">
+            <h2 style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 2.5rem;">Mengapa Anda Harus <span class="text-gradient">Segera Dipijat</span> Hari Ini?</h2>
             
-            <div class="glass-card" style="text-align: left; padding: 2.5rem; background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2);">
-                <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">
+            <div class="glass-card" style="text-align: left; padding: 3rem; background: rgba(239, 68, 68, 0.03); border-color: rgba(239, 68, 68, 0.15);">
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">
                     Otot kaku dibiarkan, tidur jadi tidak nyenyak, dan besok aktivitas Anda pasti berantakan. Mengapa harus menembus jalanan Jogja yang padat merayap hanya untuk mencari panti pijat yang ujung-ujungnya harus antre berjam-jam?
                 </p>
-                <p style="font-size: 1.05rem;">
+                <p style="font-size: 1.1rem;">
                     Waktu istirahat Anda terlalu berharga. Biarkan kami yang datang membawa kenyamanan spa bintang lima langsung ke depan pintu kamar Anda. Cukup chat WA, tunggu santai, dan nikmati pijatannya.
                 </p>
             </div>
@@ -309,27 +312,35 @@
         <div class="container">
             <div class="text-center">
                 <div class="badge">Keunggulan Layanan</div>
-                <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">Kenapa Kami <span class="text-gradient">Pilihan Utama?</span></h2>
+                <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem;">Kenapa Kami <span class="text-gradient">Pilihan Utama?</span></h2>
             </div>
             
             <div class="bento-grid">
-                <div class="glass-card bento-card" style="padding: 2rem;">
-                    <div class="bento-icon">⏱️</div>
+                <div class="glass-card bento-card" style="padding: 2.5rem;">
+                    <div class="bento-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
                     <h3>Buka 24 Jam Nonstop</h3>
                     <p>Sakit badan tidak kenal waktu. Kami siap sedia tengah malam sekalipun untuk memulihkan kebugaran Anda.</p>
                 </div>
-                <div class="glass-card bento-card" style="padding: 2rem;">
-                    <div class="bento-icon">🛵</div>
+                <div class="glass-card bento-card" style="padding: 2.5rem;">
+                    <div class="bento-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
                     <h3>Bebas Biaya Transport</h3>
                     <p>Harga jujur dan transparan di awal. Tidak ada biaya siluman atau tambahan ongkos bensin untuk terapis kami.</p>
                 </div>
-                <div class="glass-card bento-card" style="padding: 2rem;">
-                    <div class="bento-icon">🎓</div>
+                <div class="glass-card bento-card" style="padding: 2.5rem;">
+                    <div class="bento-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                    </div>
                     <h3>Terapis Berpengalaman</h3>
                     <p>Pilih terapis pria atau wanita sesuai kenyamanan Anda. Tim kami terlatih, bersertifikat, sopan, & profesional.</p>
                 </div>
-                <div class="glass-card bento-card" style="padding: 2rem;">
-                    <div class="bento-icon">🛡️</div>
+                <div class="glass-card bento-card" style="padding: 2.5rem;">
+                    <div class="bento-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
                     <h3>100% Pijat Kesehatan</h3>
                     <p>Layanan pijat kebugaran resmi, aman, dan bersih. Kami menerapkan aturan ketat tanpa layanan plus-plus.</p>
                 </div>
@@ -340,8 +351,8 @@
     <section class="section lazy-render reveal">
         <div class="container">
             <div class="text-center">
-                <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">Pilihan <span class="text-gradient">Treatment</span></h2>
-                <p class="text-muted" style="margin-bottom: 2rem;">Kembalikan kebugaran fisik Anda dengan paket transparan kami.</p>
+                <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem;">Pilihan <span class="text-gradient">Treatment</span></h2>
+                <p class="text-muted" style="margin-bottom: 3rem; font-size: 1.1rem;">Kembalikan kebugaran fisik Anda dengan paket transparan kami.</p>
             </div>
         </div>
         
@@ -349,35 +360,35 @@
             <div class="carousel container">
                 <article class="carousel-card">
                     <div>
-                        <div class="badge" style="background: rgba(234, 179, 8, 0.2);">Paling Laris 🔥</div>
-                        <h3 style="font-size: 1.5rem;">Tradisional & Urut Capek</h3>
-                        <p class="text-muted" style="margin-top: 1rem; font-size: 0.95rem;">Menghilangkan pegal-pegal berat dan melancarkan peredaran darah pasca aktivitas padat.</p>
+                        <div class="badge" style="background: rgba(234, 179, 8, 0.15);">Paling Laris</div>
+                        <h3 style="font-size: 1.75rem;">Tradisional & Urut Capek</h3>
+                        <p class="text-muted" style="margin-top: 1rem; font-size: 1rem; line-height: 1.6;">Menghilangkan pegal-pegal berat dan melancarkan peredaran darah pasca aktivitas padat.</p>
                     </div>
                     <div>
                         <div class="service-price">Mulai Rp 150.000 / Jam</div>
-                        <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Pijat%20Tradisional%20&%20Urut%20Capek." target="_blank" class="btn-glass" style="width: 100%; padding: 0.75rem; font-size: 0.9rem;">Pesan Slot Ini</a>
+                        <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Pijat%20Tradisional%20&%20Urut%20Capek." target="_blank" rel="noopener" class="btn-glass" style="width: 100%; padding: 1rem; font-size: 1rem;">Pesan Slot Ini</a>
                     </div>
                 </article>
                 <article class="carousel-card">
                     <div>
                         <div class="badge">Spesialis Masuk Angin</div>
-                        <h3 style="font-size: 1.5rem;">Refleksi & Kerokan</h3>
-                        <p class="text-muted" style="margin-top: 1rem; font-size: 0.95rem;">Menargetkan titik saraf kaki & tangan, plus metode kerok presisi untuk usir angin membandel.</p>
+                        <h3 style="font-size: 1.75rem;">Refleksi & Kerokan</h3>
+                        <p class="text-muted" style="margin-top: 1rem; font-size: 1rem; line-height: 1.6;">Menargetkan titik saraf kaki & tangan, plus metode kerok presisi untuk usir angin membandel.</p>
                     </div>
                     <div>
                         <div class="service-price">Mulai Rp 150.000 / Jam</div>
-                        <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Refleksi%20&%20Kerokan." target="_blank" class="btn-glass" style="width: 100%; padding: 0.75rem; font-size: 0.9rem;">Pesan Slot Ini</a>
+                        <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Refleksi%20&%20Kerokan." target="_blank" rel="noopener" class="btn-glass" style="width: 100%; padding: 1rem; font-size: 1rem;">Pesan Slot Ini</a>
                     </div>
                 </article>
                 <article class="carousel-card">
                     <div>
                         <div class="badge">Relaksasi Total</div>
-                        <h3 style="font-size: 1.5rem;">Sport Massage & Lulur</h3>
-                        <p class="text-muted" style="margin-top: 1rem; font-size: 0.95rem;">Pijatan otot dalam dipadu dengan minyak aromaterapi/lulur untuk kulit bersih dan pikiran rileks.</p>
+                        <h3 style="font-size: 1.75rem;">Sport Massage & Lulur</h3>
+                        <p class="text-muted" style="margin-top: 1rem; font-size: 1rem; line-height: 1.6;">Pijatan otot dalam dipadu dengan minyak aromaterapi/lulur untuk kulit bersih dan pikiran rileks.</p>
                     </div>
                     <div>
                         <div class="service-price">Mulai Rp 200.000 / Jam</div>
-                        <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Sport%20Massage%20&%20Lulur." target="_blank" class="btn-glass" style="width: 100%; padding: 0.75rem; font-size: 0.9rem;">Pesan Slot Ini</a>
+                        <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Sport%20Massage%20&%20Lulur." target="_blank" rel="noopener" class="btn-glass" style="width: 100%; padding: 1rem; font-size: 1rem;">Pesan Slot Ini</a>
                     </div>
                 </article>
             </div>
@@ -386,25 +397,40 @@
 
     <section class="section lazy-render reveal">
         <div class="container">
-            <h2 class="text-center" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem;">Apa Kata Mereka yang <span class="text-gradient">Kembali Bugar?</span></h2>
+            <h2 class="text-center" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem;">Apa Kata Mereka yang <span class="text-gradient">Kembali Bugar?</span></h2>
             
             <div class="testi-grid">
                 <div class="glass-card testi-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <p class="testi-text">"Penyelamat banget pas lagi capek keliling Malioboro. WA langsung dibalas, 15 menit mas terapisnya udah sampai di lobi hotel. Pijatannya mantap, badan enteng besoknya siap wisata lagi!"</p>
                     <p class="testi-author">— Budi, Wisatawan Jakarta</p>
                 </div>
                 <div class="glass-card testi-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <p class="testi-text">"Langganan kalau lagi pegal habis lembur kerja. Mbak terapisnya sopan dan bawa peralatan lengkap. Nyaman banget pijat di kos sendiri tanpa perlu keluar malam-malam, privasi sangat terjaga."</p>
                     <p class="testi-author">— Siska, Karyawati Swasta</p>
                 </div>
             </div>
 
-            <a href="https://placehold.co/1200x600/060b19/eab308/webp?text=Area+Layanan+Jogja+Sekitarnya" target="_blank" rel="noopener" class="maps-bypass">
-                <img src="https://placehold.co/1200x600/060b19/eab308/webp?text=Area+Layanan+Jogja+Sekitarnya" alt="Peta Lokasi Layanan Pijat Panggilan Jogja" loading="lazy">
+            <a href="https://placehold.co/1920x800/060b19/eab308/webp?text=Area+Layanan+Jogja+Sekitarnya" target="_blank" rel="noopener" class="maps-bypass">
+                <img src="https://placehold.co/1920x800/060b19/eab308/webp?text=Area+Layanan+Jogja+Sekitarnya" alt="Peta Lokasi Layanan Pijat Panggilan Jogja" loading="lazy">
                 <div class="maps-overlay">
-                    <span class="btn-glass" style="background: rgba(0,0,0,0.6);">📍 Melayani: Malioboro, Sleman, Bantul & Kota Yogyakarta</span>
+                    <span class="btn-glass" style="background: rgba(0,0,0,0.7); backdrop-filter: blur(10px);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Melayani: Malioboro, Sleman, Bantul & Kota Yogyakarta
+                    </span>
                 </div>
             </a>
         </div>
@@ -412,36 +438,47 @@
 
     <section class="section lazy-render reveal">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 4rem;">
                 
                 <div>
-                    <h2 style="font-size: 2rem; margin-bottom: 2rem;">Pertanyaan <span class="text-gradient">Terkait</span></h2>
+                    <div class="badge" style="margin-bottom: 1rem;">Knowledge Base</div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2.5rem;">Pertanyaan <span class="text-gradient">Terkait</span></h2>
+                    
                     <div class="faq-item">
-                        <div class="faq-q"><span>Q:</span> Berapa lama terapis sampai?</div>
-                        <div class="faq-a">Rata-rata kedatangan 15-30 menit. Terapis kami tersebar di banyak titik agar bisa merespons darurat dengan cepat.</div>
+                        <div class="faq-q">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Berapa lama terapis sampai?
+                        </div>
+                        <div class="faq-a">Rata-rata kedatangan 15-30 menit. Terapis kami tersebar di banyak titik agar bisa merespons darurat dengan cepat tanpa harus menunggu lama.</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-q"><span>Q:</span> Apakah aman untuk keluarga?</div>
-                        <div class="faq-a">Sangat aman! Ini adalah pijat kesehatan murni profesional (Strictly No Plus-Plus).</div>
+                        <div class="faq-q">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Apakah aman untuk keluarga?
+                        </div>
+                        <div class="faq-a">Sangat aman! Ini adalah pijat kesehatan murni profesional. Kami menerapkan standar tinggi (Strictly No Plus-Plus) untuk kenyamanan Anda.</div>
                     </div>
                     <div class="faq-item" style="border-bottom: none;">
-                        <div class="faq-q"><span>Q:</span> Metode pembayarannya?</div>
-                        <div class="faq-a">Cash langsung ke terapis, Transfer Bank, atau menggunakan QRIS setelah layanan selesai.</div>
+                        <div class="faq-q">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Metode pembayarannya?
+                        </div>
+                        <div class="faq-a">Anda dapat membayar Cash langsung ke terapis, via Transfer Bank, atau menggunakan QRIS setelah layanan dipastikan selesai dengan memuaskan.</div>
                     </div>
                 </div>
 
-                <div class="glass-card" style="padding: 2.5rem; background: linear-gradient(135deg, rgba(234,179,8,0.05) 0%, transparent 100%);">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Jadwal Terisi Sangat Cepat!</h3>
-                    <p class="text-muted" style="margin-bottom: 2rem; font-size: 0.95rem;">Amankan slot Anda sekarang sebelum keduluan antrean lain di area Anda malam ini.</p>
+                <div class="glass-card booking-cta-box">
+                    <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: #fff;">Jadwal Terisi Sangat Cepat!</h3>
+                    <p class="text-muted" style="margin-bottom: 2.5rem; font-size: 1.05rem; line-height: 1.6;">Amankan slot Anda sekarang sebelum keduluan antrean lain di area Anda malam ini.</p>
                     
-                    <form onsubmit="kirimKeWA(event)">
-                        <input type="text" id="waName" class="form-control" placeholder="Nama Lengkap Anda" required>
-                        <input type="text" id="waLocation" class="form-control" placeholder="Nama Hotel / Alamat Rumah" required>
-                        <textarea id="waMessage" class="form-control" placeholder="Keluhan (Contoh: Badan remuk minta urut capek...)" required></textarea>
-                        <button type="submit" class="btn-glass btn-wa" style="width: 100%; margin-top: 1rem;">
-                            BOOKING TANPA ANTRE
-                        </button>
-                    </form>
+                    <a href="https://wa.me/6285165982161?text=Halo%20Admin%20Massage%20Murah,%20saya%20butuh%20booking%20jasa%20pijat%20panggilan%20Jogja%20tanpa%20antre%20malam%20ini." target="_blank" rel="noopener" class="btn-glass btn-wa" style="width: 100%; font-size: 1.15rem; padding: 1.25rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        PESAN JASA PIJAT SEKARANG
+                    </a>
+                    <p style="text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 1.5rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        Privasi & Data Anda 100% Aman
+                    </p>
                 </div>
 
             </div>
@@ -451,16 +488,16 @@
     <footer class="lazy-render reveal">
         <div class="container">
             <div style="text-align: center; margin-bottom: 3rem;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary);">Massage Murah.</h3>
-                <p class="text-muted" style="max-width: 500px; margin: 0 auto;">Layanan Spa & Pijat Panggilan Profesional 24 Jam. Solusi pemulihan kebugaran fisik langsung ke kamar Anda.</p>
+                <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--primary); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800;">Massage Murah.</h3>
+                <p class="text-muted" style="max-width: 500px; margin: 0 auto; line-height: 1.8;">Layanan Spa & Pijat Panggilan Profesional 24 Jam. Solusi pemulihan kebugaran fisik langsung ke kamar Anda.</p>
             </div>
             
-            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); text-align: justify; line-height: 1.8;">
-                Otot kaku dan badan pegal setelah seharian beraktivitas berat bisa merusak produktivitas dan kualitas tidur Anda jika dibiarkan. Jangan siksa diri Anda dengan menembus kemacetan kota hanya untuk mencari tempat relaksasi. Segera amankan slot jasa pijat panggilan murah tanpa harus keluar dari kamar hotel atau rumah Anda. Segera hubungi <a href="https://massagemurah24jam.vercel.app/" style="color: var(--primary); text-decoration: none;">Massage Murah</a> untuk mendatangkan terapis profesional ke lokasi Anda dalam hitungan menit, dan kembalikan kebugaran tubuh Anda malam ini juga!
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.4); text-align: justify; line-height: 1.8;">
+                Otot kaku dan badan pegal setelah seharian beraktivitas berat bisa merusak produktivitas dan kualitas tidur Anda jika dibiarkan. Jangan siksa diri Anda dengan menembus kemacetan kota hanya untuk mencari tempat relaksasi. Segera amankan slot jasa pijat panggilan murah tanpa harus keluar dari kamar hotel atau rumah Anda. Segera hubungi <a href="https://massage-murah-24jam.vercel.app/" style="color: var(--primary); text-decoration: none;">Massage Murah</a> untuk mendatangkan terapis profesional ke lokasi Anda dalam hitungan menit, dan kembalikan kebugaran tubuh Anda malam ini juga!
             </p>
 
             <div class="tags-box">
-                <strong style="color: var(--text-main); display: block; margin-bottom: 0.75rem;">Pencarian Terkait (Area Cover):</strong>
+                <strong style="color: var(--text-main); display: block; margin-bottom: 1rem;">Pencarian Terkait (Area Cover):</strong>
                 jasa pijat panggilan murah | layanan spa 24 jam malioboro | harga pijat hotel sleman | spesialis urut capek bantul | nomor wa terapis pijat kota yogyakarta | tukang urut terdekat seturan | pijat refleksi prawirotaman | pijat kesehatan depok jogja | tarif pijat lulur panggilan tanpa antre
             </div>
 
@@ -472,21 +509,10 @@
     </footer>
 
     <a href="https://wa.me/6285165982161?text=Halo%20Admin%20Massage%20Murah,%20saya%20perlu%20booking%20terapis%20darurat%20sekarang." class="sticky-wa" target="_blank" rel="noopener" aria-label="WhatsApp Kami">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
     </a>
 
     <script>
-        // Form to WA Dummy Engine
-        function kirimKeWA(event) {
-            event.preventDefault();
-            const nama = encodeURIComponent(document.getElementById('waName').value);
-            const lokasi = encodeURIComponent(document.getElementById('waLocation').value);
-            const pesan = encodeURIComponent(document.getElementById('waMessage').value);
-            
-            const teksWA = `Halo Admin Massage Murah, saya *${nama}*.%0A%0ATolong jadwalkan terapis ke lokasi saya di: *${lokasi}*.%0A%0AKeluhan / Treatment: _${pesan}_%0A%0AApakah ada slot kosong sekarang?`;
-            window.location.href = `https://wa.me/6285165982161?text=${teksWA}`;
-        }
-
         // Scroll Reveal
         document.addEventListener("DOMContentLoaded", () => {
             const observer = new IntersectionObserver((entries) => {
