@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Badan pegal & masuk angin? Layanan jasa pijat panggilan murah 24 jam untuk area Malioboro, Sleman, Bantul, dan Kota Yogyakarta. Bebas biaya transport, terapis profesional!">
+    <meta name="keywords" content="pijat panggilan murah, jasa pijat 24 jam, layanan spa panggilan hotel, harga pijat terdekat, spesialis urut capek, nomor wa terapis pijat, tarif pijat panggilan jogja">
+    <title>PIJAT PANGGILAN MURAH 24 JAM: Spa Hotel & Rumah Tanpa Antre | Massage Murah</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💆</text></svg>">
+
+    <style>
+        /* ==========================================================================
+           ZERO-BLOAT VANILLA CSS (MOTHERSHIP SPA PREMIUM)
+           ========================================================================== */
+        :root {
+            --primary: #eab308; /* Premium Gold */
+            --primary-glow: rgba(234, 179, 8, 0.4);
+            --bg-base: #060b19; /* Deep Navy Blue / Premium Spa feel */
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-highlight: rgba(255, 255, 255, 0.12);
+            --danger: #ef4444;
+            --wa-green: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg-base); color: var(--text-main); line-height: 1.7; overflow-x: hidden; antialiased; font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .brand, .stat-val, .badge { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.03em; }
+
+        /* Aura 3D Illusion Background */
+        .ambient-bg {
+            position: fixed; inset: 0; z-index: -1;
+            background-color: var(--bg-base);
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(234, 179, 8, 0.1), transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(30, 58, 138, 0.2), transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(234, 179, 8, 0.05), transparent 50%),
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+            animation: bgShift 15s ease-in-out infinite alternate;
+        }
+        @keyframes bgShift { 0% { background-position: 0% 0%, 0% 0%, 0% 0%, 0 0, 0 0; } 100% { background-position: 100% 100%, -50% 50%, 50% -50%, 20px 20px, 20px 20px; } }
+
+        .gradient-blur { position: fixed; z-index: 5; inset: auto 0 0 0; height: 15vh; pointer-events: none; backdrop-filter: blur(10px); -webkit-mask: linear-gradient(to bottom, transparent 0%, black 100%); mask: linear-gradient(to bottom, transparent 0%, black 100%); }
+
+        /* Typography & Layout */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .section { padding: 6rem 0; position: relative; z-index: 10; }
+        .text-center { text-align: center; }
+        .lazy-render { content-visibility: auto; contain-intrinsic-size: 1px 1000px; contain: paint; }
+
+        /* Animations */
+        @keyframes fadeSlideIn { 0% { opacity: 0; transform: translateY(30px); filter: blur(8px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0px); } }
+        @keyframes shimmer-mask { to { -webkit-mask-position: 200% 0; mask-position: 200% 0; } }
+        @keyframes sweep { 0% { left: -100%; } 100% { left: 200%; } }
+        
+        .animate-fade { animation: fadeSlideIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+        .animate-shimmer-mask {
+            -webkit-mask: linear-gradient(90deg, transparent 0, #fff 20%, #fff 80%, transparent 200%) 0 0/200% 100% no-repeat;
+            mask: linear-gradient(90deg, transparent 0, #fff 20%, #fff 80%, transparent 200%) 0 0/200% 100% repeat;
+            animation: shimmer-mask 3s ease-in-out infinite both;
+        }
+        .text-gradient { background: linear-gradient(135deg, var(--primary) 0%, #fff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Glassmorphism */
+        .glass-card {
+            background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border); border-top-color: var(--glass-highlight); border-left-color: var(--glass-highlight);
+            border-radius: 1.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s, background 0.4s;
+        }
+        .glass-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.05); border-color: rgba(234, 179, 8, 0.3); border-top-color: rgba(234, 179, 8, 0.5); }
+        
+        .badge {
+            display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.25rem; border-radius: 50px;
+            background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.2);
+            font-size: 0.85rem; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 2rem;
+        }
+
+        /* Buttons */
+        .btn-glass {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem;
+            padding: 1rem 2.25rem; border-radius: 50px; font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif;
+            text-decoration: none; color: var(--text-main);
+            background: var(--glass-bg); backdrop-filter: blur(16px); 
+            border: 1px solid var(--glass-border); border-top-color: var(--glass-highlight);
+            transition: all 0.3s ease; position: relative; overflow: hidden; cursor: pointer; text-align: center;
+        }
+        .btn-glass::before { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); transition: all 0.5s ease; }
+        .btn-glass:hover::before { animation: sweep 1.5s infinite; }
+        .btn-glass:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        
+        .btn-wa { background: var(--wa-green); color: #fff; border: none; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); }
+        .btn-wa:hover { background: #1ebd5a; box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5); }
+        
+        /* Navbar */
+        .navbar { position: fixed; top: 0; width: 100%; z-index: 50; padding: 1rem 0; background: rgba(6, 11, 25, 0.8); backdrop-filter: blur(24px); border-bottom: 1px solid var(--glass-border); }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-size: clamp(1.2rem, 3vw, 1.5rem); font-weight: 800; color: var(--text-main); text-decoration: none; letter-spacing: -1px; display: flex; align-items: center; gap: 0.5rem; }
+
+        /* Hero */
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-top: 8rem; padding-bottom: 4rem; position: relative; }
+        .hero::before {
+            content: ''; position: absolute; inset: 0; z-index: -1;
+            background: url('https://placehold.co/1920x1080/060b19/eab308/webp?text=Latar+Belakang+Spa+Premium') center/cover no-repeat;
+            opacity: 0.15; mask-image: linear-gradient(to bottom, black 40%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        }
+        .hero-title { line-height: 1.1; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 1.5rem; width: 100%; font-size: clamp(2rem, 6vw, 4.5rem); }
+        .hero-subtitle { font-size: clamp(1rem, 2.5vw, 1.15rem); color: var(--text-muted); max-width: 700px; margin: 1.5rem auto 2.5rem; line-height: 1.8; font-weight: 400; }
+        
+        /* Trust Signals */
+        .trust-signals { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 3rem; font-size: 0.9rem; color: var(--text-muted); font-weight: 600; }
+        .trust-item { display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.03); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--glass-border); }
+
+        /* Bento Grid */
+        .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+        .bento-icon { width: 50px; height: 50px; border-radius: 12px; background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; color: var(--primary); }
+        .bento-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .bento-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+
+        /* Carousel Services */
+        .carousel-wrapper { width: 100%; overflow: hidden; position: relative; margin-top: 3rem; }
+        .carousel { display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 1rem 0 3rem; scrollbar-width: none; }
+        .carousel::-webkit-scrollbar { display: none; }
+        .carousel-card { min-width: 85vw; max-width: 400px; scroll-snap-align: center; flex: 0 0 auto; border-radius: 1.5rem; background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; }
+        @media (min-width: 768px) { .carousel-card { min-width: 350px; } }
+        .service-price { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin: 1rem 0; }
+
+        /* Testimonials */
+        .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+        .testi-card { padding: 2rem; }
+        .stars { color: var(--primary); margin-bottom: 1rem; letter-spacing: 2px; }
+        .testi-text { font-style: italic; color: #e2e8f0; margin-bottom: 1.5rem; font-size: 0.95rem; }
+        .testi-author { font-weight: 700; font-size: 0.9rem; color: var(--primary); }
+
+        /* Maps Bypass Area */
+        .maps-bypass { display: flex; align-items: center; justify-content: center; position: relative; border-radius: 2rem; overflow: hidden; margin-top: 3rem; border: 1px solid var(--glass-highlight); aspect-ratio: 16/9; text-decoration: none; box-shadow: 0 20px 40px rgba(0,0,0,0.4); background: var(--bg-base); }
+        @media (max-width: 768px) { .maps-bypass { aspect-ratio: 4/3; border-radius: 1.5rem; } }
+        .maps-bypass img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; transition: transform 0.8s, opacity 0.4s; filter: grayscale(30%); }
+        .maps-bypass:hover img { transform: scale(1.05); opacity: 0.7; filter: grayscale(0%); }
+        .maps-overlay { position: absolute; z-index: 2; padding: 0 1.5rem; text-align: center; }
+
+        /* Forms & FAQ */
+        .faq-item { border-bottom: 1px solid var(--glass-border); padding: 1.5rem 0; }
+        .faq-q { font-weight: 600; font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.5rem; display: flex; align-items: flex-start; gap: 0.75rem; }
+        .faq-a { color: var(--text-muted); font-size: 0.95rem; padding-left: 2.25rem; }
+        
+        .form-control { width: 100%; padding: 1.25rem; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: 1rem; color: #fff; font-size: 0.95rem; font-family: 'Inter', sans-serif; margin-bottom: 1rem; transition: all 0.3s; }
+        .form-control:focus { outline: none; border-color: var(--primary); background: rgba(255,255,255,0.06); }
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        /* Footer */
+        footer { border-top: 1px solid var(--glass-border); padding: 4rem 0 2rem; margin-top: 4rem; background: rgba(0,0,0,0.4); backdrop-filter: blur(20px); }
+        .tags-box { background: rgba(255,255,255,0.02); padding: 1.5rem; border-radius: 1rem; font-size: 0.75rem; color: var(--text-muted); border: 1px solid var(--glass-border); line-height: 1.8; margin-top: 2rem; }
+        .credit { border-top: 1px solid var(--glass-border); padding-top: 1.5rem; text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: 2rem; }
+        .credit a { color: var(--primary); text-decoration: none; }
+
+        /* Scroll Reveal Utility */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Mobile Adjustments */
+        .sticky-wa { position: fixed; bottom: 20px; right: 20px; background: var(--wa-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); z-index: 99; animation: pulseWa 2s infinite; border: 2px solid rgba(255,255,255,0.2); }
+        @keyframes pulseWa { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        
+        @media (max-width: 768px) { 
+            .section { padding: 4rem 0; } 
+            body { padding-bottom: 100px !important; } 
+            .btn-glass { width: 100%; } 
+            .hero-title { font-size: 2.2rem; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://massagemurah24jam.vercel.app/#localbusiness",
+          "name": "Massage Murah",
+          "description": "Jasa Spa & Pijat Panggilan Profesional 24 Jam di Yogyakarta. Layanan ke hotel, apartemen, dan rumah bebas biaya transport.",
+          "url": "https://massagemurah24jam.vercel.app/",
+          "telephone": "+6285165982161",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kota Yogyakarta",
+            "addressRegion": "DI Yogyakarta",
+            "addressCountry": "ID"
+          },
+          "priceRange": "$$",
+          "sameAs": ["https://massagemurah.biz.id/"]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://massagemurah24jam.vercel.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Berapa lama terapis akan sampai ke lokasi saya?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Terapis kami tersebar di berbagai titik. Rata-rata waktu kedatangan adalah 15-30 menit tergantung jarak lokasi Anda di Jogja." }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah ini layanan pijat khusus keluarga?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Ya, kami adalah penyedia jasa pijat kebugaran dan kesehatan profesional 100% resmi. Kami menolak keras layanan asusila (No Plus-Plus)." }
+            },
+            {
+              "@type": "Question",
+              "name": "Bagaimana cara pembayarannya?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Anda bisa membayar tunai langsung kepada terapis setelah sesi selesai, atau melakukan pembayaran via Transfer Bank maupun QRIS." }
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://massagemurah24jam.vercel.app/#webpage",
+          "url": "https://massagemurah24jam.vercel.app/",
+          "name": "PIJAT PANGGILAN MURAH 24 JAM: Spa Hotel & Rumah Tanpa Antre",
+          "isPartOf": { "@id": "https://massagemurah24jam.vercel.app/#localbusiness" },
+          "relatedLink": [
+            "https://dongkrakusaha.com/layanan-pijat-panggilan-murah-malioboro",
+            "https://dongkrakusaha.com/layanan-pijat-panggilan-murah-sleman",
+            "https://dongkrakusaha.com/layanan-pijat-panggilan-murah-bantul",
+            "https://dongkrakusaha.com/layanan-pijat-panggilan-murah-kota-yogyakarta",
+            "https://dongkrakusaha.com/layanan-pijat-panggilan-murah-seturan",
+            "https://dongkrakusaha.com/layanan-pijat-panggilan-murah-prawirotaman",
+            "https://dongkrakusaha.com/layanan-pijat-panggilan-murah-depok"
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <div class="ambient-bg"></div>
+    <div class="gradient-blur"></div>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="brand">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg>
+                Massage<span style="color: var(--primary);">Murah.</span>
+            </a>
+            <a href="https://wa.me/6285165982161?text=Halo%20Admin%20Massage%20Murah,%20saya%20butuh%20terapis%20sekarang." target="_blank" rel="noopener" class="btn-glass btn-wa" style="padding: 0.5rem 1rem; font-size: 0.8rem; width: auto;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                WA Darurat
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="badge animate-fade">
+                ⭐ Layanan Pijat Panggilan #1 Jogja
+            </div>
+
+            <h1 class="hero-title animate-fade" style="animation-delay: 0.1s;">
+                Badan Remuk & Masuk Angin?<br>
+                <span class="text-gradient">Jangan Siksa Diri Anda</span><br>
+                Di Tengah Kemacetan!
+            </h1>
+
+            <p class="hero-subtitle animate-fade" style="animation-delay: 0.2s;">
+                Terapis pijat profesional kami siap meluncur ke Hotel, Apartemen, dan Rumah Anda di Jogja dalam 15 menit. Buka 24 Jam Nonstop tanpa antre, tanpa biaya transportasi tambahan!
+            </p>
+            
+            <div class="animate-fade" style="animation-delay: 0.3s;">
+                <a href="https://wa.me/6285165982161?text=Halo%20Admin%20Massage%20Murah,%20badan%20saya%20pegal%20dan%20butuh%20terapis%20panggilan%20sekarang.%20Bisa%20cek%20slot?" target="_blank" rel="noopener" class="btn-glass btn-wa" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">
+                    PANGGIL TERAPIS SEKARANG!
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--primary);">*Respon Cepat di bawah 1 Menit</p>
+            </div>
+
+            <div class="trust-signals animate-fade" style="animation-delay: 0.4s;">
+                <div class="trust-item">🔒 100% Pijat Kesehatan</div>
+                <div class="trust-item">👨‍⚕️ Terapis Bersertifikat</div>
+                <div class="trust-item">⏱️ Buka 24 Jam</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section lazy-render reveal">
+        <div class="container text-center" style="max-width: 800px;">
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem;">Mengapa Anda Harus <span class="text-gradient">Segera Dipijat</span> Hari Ini?</h2>
+            
+            <div class="glass-card" style="text-align: left; padding: 2.5rem; background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2);">
+                <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">
+                    Otot kaku dibiarkan, tidur jadi tidak nyenyak, dan besok aktivitas Anda pasti berantakan. Mengapa harus menembus jalanan Jogja yang padat merayap hanya untuk mencari panti pijat yang ujung-ujungnya harus antre berjam-jam?
+                </p>
+                <p style="font-size: 1.05rem;">
+                    Waktu istirahat Anda terlalu berharga. Biarkan kami yang datang membawa kenyamanan spa bintang lima langsung ke depan pintu kamar Anda. Cukup chat WA, tunggu santai, dan nikmati pijatannya.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section lazy-render reveal">
+        <div class="container">
+            <div class="text-center">
+                <div class="badge">Keunggulan Layanan</div>
+                <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">Kenapa Kami <span class="text-gradient">Pilihan Utama?</span></h2>
+            </div>
+            
+            <div class="bento-grid">
+                <div class="glass-card bento-card" style="padding: 2rem;">
+                    <div class="bento-icon">⏱️</div>
+                    <h3>Buka 24 Jam Nonstop</h3>
+                    <p>Sakit badan tidak kenal waktu. Kami siap sedia tengah malam sekalipun untuk memulihkan kebugaran Anda.</p>
+                </div>
+                <div class="glass-card bento-card" style="padding: 2rem;">
+                    <div class="bento-icon">🛵</div>
+                    <h3>Bebas Biaya Transport</h3>
+                    <p>Harga jujur dan transparan di awal. Tidak ada biaya siluman atau tambahan ongkos bensin untuk terapis kami.</p>
+                </div>
+                <div class="glass-card bento-card" style="padding: 2rem;">
+                    <div class="bento-icon">🎓</div>
+                    <h3>Terapis Berpengalaman</h3>
+                    <p>Pilih terapis pria atau wanita sesuai kenyamanan Anda. Tim kami terlatih, bersertifikat, sopan, & profesional.</p>
+                </div>
+                <div class="glass-card bento-card" style="padding: 2rem;">
+                    <div class="bento-icon">🛡️</div>
+                    <h3>100% Pijat Kesehatan</h3>
+                    <p>Layanan pijat kebugaran resmi, aman, dan bersih. Kami menerapkan aturan ketat tanpa layanan plus-plus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section lazy-render reveal">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">Pilihan <span class="text-gradient">Treatment</span></h2>
+                <p class="text-muted" style="margin-bottom: 2rem;">Kembalikan kebugaran fisik Anda dengan paket transparan kami.</p>
+            </div>
+        </div>
+        
+        <div class="carousel-wrapper">
+            <div class="carousel container">
+                <article class="carousel-card">
+                    <div>
+                        <div class="badge" style="background: rgba(234, 179, 8, 0.2);">Paling Laris 🔥</div>
+                        <h3 style="font-size: 1.5rem;">Tradisional & Urut Capek</h3>
+                        <p class="text-muted" style="margin-top: 1rem; font-size: 0.95rem;">Menghilangkan pegal-pegal berat dan melancarkan peredaran darah pasca aktivitas padat.</p>
+                    </div>
+                    <div>
+                        <div class="service-price">Mulai Rp 150.000 / Jam</div>
+                        <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Pijat%20Tradisional%20&%20Urut%20Capek." target="_blank" class="btn-glass" style="width: 100%; padding: 0.75rem; font-size: 0.9rem;">Pesan Slot Ini</a>
+                    </div>
+                </article>
+                <article class="carousel-card">
+                    <div>
+                        <div class="badge">Spesialis Masuk Angin</div>
+                        <h3 style="font-size: 1.5rem;">Refleksi & Kerokan</h3>
+                        <p class="text-muted" style="margin-top: 1rem; font-size: 0.95rem;">Menargetkan titik saraf kaki & tangan, plus metode kerok presisi untuk usir angin membandel.</p>
+                    </div>
+                    <div>
+                        <div class="service-price">Mulai Rp 150.000 / Jam</div>
+                        <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Refleksi%20&%20Kerokan." target="_blank" class="btn-glass" style="width: 100%; padding: 0.75rem; font-size: 0.9rem;">Pesan Slot Ini</a>
+                    </div>
+                </article>
+                <article class="carousel-card">
+                    <div>
+                        <div class="badge">Relaksasi Total</div>
+                        <h3 style="font-size: 1.5rem;">Sport Massage & Lulur</h3>
+                        <p class="text-muted" style="margin-top: 1rem; font-size: 0.95rem;">Pijatan otot dalam dipadu dengan minyak aromaterapi/lulur untuk kulit bersih dan pikiran rileks.</p>
+                    </div>
+                    <div>
+                        <div class="service-price">Mulai Rp 200.000 / Jam</div>
+                        <a href="https://wa.me/6285165982161?text=Halo%20Admin,%20saya%20mau%20pesan%20layanan%20Sport%20Massage%20&%20Lulur." target="_blank" class="btn-glass" style="width: 100%; padding: 0.75rem; font-size: 0.9rem;">Pesan Slot Ini</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section lazy-render reveal">
+        <div class="container">
+            <h2 class="text-center" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem;">Apa Kata Mereka yang <span class="text-gradient">Kembali Bugar?</span></h2>
+            
+            <div class="testi-grid">
+                <div class="glass-card testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Penyelamat banget pas lagi capek keliling Malioboro. WA langsung dibalas, 15 menit mas terapisnya udah sampai di lobi hotel. Pijatannya mantap, badan enteng besoknya siap wisata lagi!"</p>
+                    <p class="testi-author">— Budi, Wisatawan Jakarta</p>
+                </div>
+                <div class="glass-card testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Langganan kalau lagi pegal habis lembur kerja. Mbak terapisnya sopan dan bawa peralatan lengkap. Nyaman banget pijat di kos sendiri tanpa perlu keluar malam-malam, privasi sangat terjaga."</p>
+                    <p class="testi-author">— Siska, Karyawati Swasta</p>
+                </div>
+            </div>
+
+            <a href="https://placehold.co/1200x600/060b19/eab308/webp?text=Area+Layanan+Jogja+Sekitarnya" target="_blank" rel="noopener" class="maps-bypass">
+                <img src="https://placehold.co/1200x600/060b19/eab308/webp?text=Area+Layanan+Jogja+Sekitarnya" alt="Peta Lokasi Layanan Pijat Panggilan Jogja" loading="lazy">
+                <div class="maps-overlay">
+                    <span class="btn-glass" style="background: rgba(0,0,0,0.6);">📍 Melayani: Malioboro, Sleman, Bantul & Kota Yogyakarta</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="section lazy-render reveal">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem;">
+                
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 2rem;">Pertanyaan <span class="text-gradient">Terkait</span></h2>
+                    <div class="faq-item">
+                        <div class="faq-q"><span>Q:</span> Berapa lama terapis sampai?</div>
+                        <div class="faq-a">Rata-rata kedatangan 15-30 menit. Terapis kami tersebar di banyak titik agar bisa merespons darurat dengan cepat.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q"><span>Q:</span> Apakah aman untuk keluarga?</div>
+                        <div class="faq-a">Sangat aman! Ini adalah pijat kesehatan murni profesional (Strictly No Plus-Plus).</div>
+                    </div>
+                    <div class="faq-item" style="border-bottom: none;">
+                        <div class="faq-q"><span>Q:</span> Metode pembayarannya?</div>
+                        <div class="faq-a">Cash langsung ke terapis, Transfer Bank, atau menggunakan QRIS setelah layanan selesai.</div>
+                    </div>
+                </div>
+
+                <div class="glass-card" style="padding: 2.5rem; background: linear-gradient(135deg, rgba(234,179,8,0.05) 0%, transparent 100%);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Jadwal Terisi Sangat Cepat!</h3>
+                    <p class="text-muted" style="margin-bottom: 2rem; font-size: 0.95rem;">Amankan slot Anda sekarang sebelum keduluan antrean lain di area Anda malam ini.</p>
+                    
+                    <form onsubmit="kirimKeWA(event)">
+                        <input type="text" id="waName" class="form-control" placeholder="Nama Lengkap Anda" required>
+                        <input type="text" id="waLocation" class="form-control" placeholder="Nama Hotel / Alamat Rumah" required>
+                        <textarea id="waMessage" class="form-control" placeholder="Keluhan (Contoh: Badan remuk minta urut capek...)" required></textarea>
+                        <button type="submit" class="btn-glass btn-wa" style="width: 100%; margin-top: 1rem;">
+                            BOOKING TANPA ANTRE
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="lazy-render reveal">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary);">Massage Murah.</h3>
+                <p class="text-muted" style="max-width: 500px; margin: 0 auto;">Layanan Spa & Pijat Panggilan Profesional 24 Jam. Solusi pemulihan kebugaran fisik langsung ke kamar Anda.</p>
+            </div>
+            
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); text-align: justify; line-height: 1.8;">
+                Otot kaku dan badan pegal setelah seharian beraktivitas berat bisa merusak produktivitas dan kualitas tidur Anda jika dibiarkan. Jangan siksa diri Anda dengan menembus kemacetan kota hanya untuk mencari tempat relaksasi. Segera amankan slot jasa pijat panggilan murah tanpa harus keluar dari kamar hotel atau rumah Anda. Segera hubungi <a href="https://massagemurah24jam.vercel.app/" style="color: var(--primary); text-decoration: none;">Massage Murah</a> untuk mendatangkan terapis profesional ke lokasi Anda dalam hitungan menit, dan kembalikan kebugaran tubuh Anda malam ini juga!
+            </p>
+
+            <div class="tags-box">
+                <strong style="color: var(--text-main); display: block; margin-bottom: 0.75rem;">Pencarian Terkait (Area Cover):</strong>
+                jasa pijat panggilan murah | layanan spa 24 jam malioboro | harga pijat hotel sleman | spesialis urut capek bantul | nomor wa terapis pijat kota yogyakarta | tukang urut terdekat seturan | pijat refleksi prawirotaman | pijat kesehatan depok jogja | tarif pijat lulur panggilan tanpa antre
+            </div>
+
+            <div class="credit">
+                © 2026 Massage Murah. Strictly 100% Health Massage.<br>
+                SEO & Web Development by <a href="https://ciledugpromo.biz.id" target="_blank" rel="nofollow noopener noreferrer">ciledugpromo.biz.id</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/6285165982161?text=Halo%20Admin%20Massage%20Murah,%20saya%20perlu%20booking%20terapis%20darurat%20sekarang." class="sticky-wa" target="_blank" rel="noopener" aria-label="WhatsApp Kami">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+
+    <script>
+        // Form to WA Dummy Engine
+        function kirimKeWA(event) {
+            event.preventDefault();
+            const nama = encodeURIComponent(document.getElementById('waName').value);
+            const lokasi = encodeURIComponent(document.getElementById('waLocation').value);
+            const pesan = encodeURIComponent(document.getElementById('waMessage').value);
+            
+            const teksWA = `Halo Admin Massage Murah, saya *${nama}*.%0A%0ATolong jadwalkan terapis ke lokasi saya di: *${lokasi}*.%0A%0AKeluhan / Treatment: _${pesan}_%0A%0AApakah ada slot kosong sekarang?`;
+            window.location.href = `https://wa.me/6285165982161?text=${teksWA}`;
+        }
+
+        // Scroll Reveal
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
